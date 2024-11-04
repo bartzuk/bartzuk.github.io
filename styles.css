@@ -4,24 +4,24 @@ html {
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #70A2A0;
+    background-color: #b7e8e1;
     margin: 0px;
 }
 
 .one {
-    background-color: #849486;
+    background-color: #c9e5c3;
 }
 
 .two {
-    background-color: #98866c;
+    background-color: #dbe2a5;
 }
 
 .three {
-    background-color: #ac7852;
+    background-color: #dbe2a5;
 }
 
 .four {
-    background-color: #BF6B37;
+    background-color: #eddf87;
 }
 
 .backdropContainer {
