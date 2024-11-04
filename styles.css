@@ -1,27 +1,32 @@
 html {
     scroll-behavior: smooth;
+    --one: #b7e8e1 ;
+    --two: #c9e5c3;
+    --three: #dbe2a5;
+    --four: #eddf87;
+    --five: #ffda69;
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #b7e8e1;
+    background-color: var(--one);
     margin: 0px;
 }
 
-.one {
-    background-color: #c9e5c3;
-}
-
 .two {
-    background-color: #dbe2a5;
+    background-color: var(--two);
 }
 
 .three {
-    background-color: #dbe2a5;
+    background-color: var(--three);
 }
 
 .four {
-    background-color: #eddf87;
+    background-color: var(--four);
+}
+
+.five {
+    background-color:var(--five);
 }
 
 .backdropContainer {
@@ -38,7 +43,7 @@ body {
     --w: 150px;
     width: var(--w);
     height: var(--w);
-    background-color: #8a998c;
+    background-color: var(--two);
     border-radius: 100%;
     box-shadow: 0px 0px 10px #00000013;
     flex: 0 0 var(--w);
@@ -236,7 +241,7 @@ body {
 
 #d1 {
     margin-top: 5px;
-    background-color: #70A2A0;
+    background-color: var(--one);
 }
 
 .top.off {
@@ -251,7 +256,6 @@ body {
     width: 100%;
     height: fit-content;
     float: none;
-    background-color: #383633;
     position: relative;
 }
 
@@ -280,7 +284,7 @@ body {
 }
 
 .info h1, .info h2 {
-    color: #d1e4e6;
+    color: #3c3f3f;
 }
 
 .textWrap {
@@ -303,7 +307,7 @@ body {
 
 #footer {
     height: 200px;
-    background-color: #BF6B37;
+    background-color: var(--five);
 }
 
 #footerText {
