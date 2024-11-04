@@ -1,0 +1,321 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #70A2A0;
+    margin: 0px;
+}
+
+.one {
+    background-color: #849486;
+}
+
+.two {
+    background-color: #98866c;
+}
+
+.three {
+    background-color: #ac7852;
+}
+
+.four {
+    background-color: #BF6B37;
+}
+
+.backdropContainer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#logo {
+    --w: 150px;
+    width: var(--w);
+    height: var(--w);
+    background-color: #8a998c;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px #00000013;
+    flex: 0 0 var(--w);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65;
+    left: calc(50% - var(--w)/2);
+}
+
+#logo img {
+    width: 100px;
+    flex: 0 0 100px;
+}
+
+@keyframes grow1 {
+    0% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+    37.5% {
+        width: calc(1.10*var(--s));
+        top: calc(1.10*var(--t));
+        left: calc(50% - (1.10*var(--s))/2);
+    }
+    100% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+}
+
+@keyframes grow2 {
+    10% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+    50% {
+        width: calc(1.10*var(--s));
+        top: calc(1.10*var(--t));
+        left: calc(50% - (1.10*var(--s))/2);
+    }
+    100% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+}
+
+
+@keyframes grow3 {
+    20% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+    62.5% {
+        width: calc(1.10*var(--s));
+        top: calc(1.10*var(--t));
+        left: calc(50% - (1.10*var(--s))/2);
+    }
+    100% {
+        width: var(--s);
+        top: var(--t);
+        left: calc(50% - var(--s)/2);
+    }
+}
+
+.Backdrop {
+    aspect-ratio: 1;
+    --g:/20.56% 20.56% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+    mask: 100% 50% var(--g),93.301% 75% var(--g),75% 93.301% var(--g),50% 100% var(--g),25% 93.301% var(--g),6.699% 75% var(--g),0% 50% var(--g),6.699% 25% var(--g),25% 6.699% var(--g),50% 0% var(--g),75% 6.699% var(--g),93.301% 25% var(--g),radial-gradient(100% 100%,#000 38.366%,#0000 calc(38.366% + 1px));
+    flex: 0 0 var(--s);
+    position: absolute;
+}
+
+#lb1 {
+    --s: 250px;
+    --t: 20px;
+    width: var(--s);
+    top: var(--t);
+    left: calc(50% - var(--s)/2);
+    box-shadow: 0px 0px 10px #00000013;
+}
+
+.lb2 {
+    animation-name: grow1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    --s: 450px;
+    --t: -80px;
+    width: var(--s);
+    top: var(--t);
+    left: calc(50% - var(--s)/2);
+    box-shadow: 0px 0px 10px #00000013;
+}
+
+.lb3 {
+    animation-name: grow2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    --s: 950px;
+    --t: -320px;
+    width: var(--s);
+    top: var(--t);
+    left: calc(50% - var(--s)/2);
+    box-shadow: 0px 0px 10px #00000013;
+}
+
+.lb4 {
+    animation-name: grow3;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    --s: 1550px;
+    --t: -620px;
+    width: var(--s);
+    top: var(--t);
+    left: calc(50% - var(--s)/2);
+    box-shadow: 0px 0px 10px #00000013;
+}
+
+#main {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 200px);
+}
+
+.offer {
+    width: 25%;
+    aspect-ratio : 1 / 1;
+    border-radius: 100%;
+    margin: 5px 2% 0px 2%;
+    float: left;
+}
+
+.info .offer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main div {
+    margin: 4% 2% 0px 2%;
+}
+
+.offerMain {
+    transition: width 0.25s, height 0.25s, box-shadow 0.25s, top 0.25s, margin-top 0.25s, margin-left 0.25s;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    float: left;
+    position: static;
+    margin-top: 10%;
+    margin-left: 10%;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: inset 0px 0px 8px 6px #0000003b;
+}
+
+.offerMain:hover {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+.shadowWrap {
+    filter: drop-shadow(0px 7px 3px #0000003b);
+    z-index: 10;
+    position: relative;
+}
+
+.top {
+    width: 100%;
+    height: 100px;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),calc(50% + 50px) calc(100% - 50px),50% 100%,calc(50% - 50px) calc(100% - 50px),0 calc(100% - 50px));
+}
+
+.bottom {
+    width: 100%;
+    clip-path: polygon(0 0,calc(50% - 0px - 50px) 0,50% calc(50px + 0px),calc(50% + 0px + 50px) 0,100% 0,100% 100%,0 100%);
+    margin-top: -50px;
+}
+
+#d1 {
+    margin-top: 5px;
+    background-color: #70A2A0;
+}
+
+.top.off {
+    margin-top: -10px;
+}
+
+.bottom.off {
+    height: 75px;
+}
+
+#infoContainer {
+    width: 100%;
+    height: fit-content;
+    float: none;
+    background-color: #383633;
+    position: relative;
+}
+
+.info {
+    width: 100%;
+    height: 51vh;
+    margin-top: -74px;
+    position: relative;
+    top: 50%;
+    padding-bottom: 60px;
+    padding-top: 103px;
+}
+
+.info.one {
+    margin-top: -20px;
+    padding-top: 60px;
+}
+
+.infoRight {
+    right: 0;
+}
+
+.iRight h1, .iRight h2{
+    text-align: right;
+    margin-left: 25%;
+}
+
+.info h1, .info h2 {
+    color: #d1e4e6;
+}
+
+.textWrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tWrapLeft {
+    margin-left: 30%;
+    margin-right: 10%;
+    width: 60%;
+}
+
+.tWrapRight {
+    margin-right: 30%;
+    margin-left: 10%;
+    width: 60%;
+}
+
+#footer {
+    height: 200px;
+    background-color: #BF6B37;
+}
+
+#footerText {
+    margin-inline: 25%;
+    width: 50%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 500px) {
+
+}
