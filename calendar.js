@@ -1,15 +1,3 @@
-async function getCredentials() {
-  const apiKey = prompt('Please enter your API key:');
-  const clientId = prompt('Please enter your Client ID:');
-  
-  if (!apiKey || !clientId) {
-    alert('Both API key and Client ID are required!');
-    return null;
-  }
-  
-  return { apiKey, clientId };
-}
-
 function loadGoogleAPI() {
     return new Promise((resolve) => {
         if (window.gapi) {
@@ -47,9 +35,11 @@ window.onload = generateCalendar(new Date());
 let offset = 0;
 
 async function generateCalendar(startDate) {
-    const credentials = await getCredentials();
-    API_KEY = credentials.apiKey;
-    CLIENT_ID = credentials.clientId;
+    const apiKey = prompt('Please enter your API key:');
+    const clientId = prompt('Please enter your Client ID:');
+  
+    API_KEY = apiKey;
+    CLIENT_ID = clientId;
     
     const gapi = await loadGoogleAPI();
     await gapi.auth2.init({ client_id: CLIENT_ID });
