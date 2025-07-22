@@ -40,7 +40,7 @@ header {
     height: 60px;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 5px solid var(--background-color);
+    box-shadow: 5px 5px 0 #fbf3de20;
     z-index: 2;
 }
 
