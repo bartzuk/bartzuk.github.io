@@ -251,7 +251,7 @@ section {
     font-weight: 800;
     height: fit-content;
     display: flex;
-    margin-top: 250px;
+    margin-top: 300px;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: 
@@ -298,8 +298,7 @@ ul {
 }
 
 .offerIcon {
-    margin-left: 50px;
-    margin-top: 20px;
+    margin: auto;
     width: 247px;
     height: 247px;
     background-size: cover;
@@ -307,15 +306,20 @@ ul {
 }
 
 .offerText {
-    padding: 20px;
+    margin-top: 20px;
     width: calc(100% - 650px - 250px);
 }
 
 .offerText h1 {
-    padding-left: 50px;
-    margin-top: -25px;
-    font-family: 'Parisienne', cursive;
     font-size: 75px;
+    letter-spacing: -1px;
+    background-color: #dddada;
+    color: #383737;
+    border-radius: 10px 10px 0px 0px;
+    height: 85px;
+    margin-bottom: 60px;
+    padding-left: 15px;
+    margin-top: -20px;
     letter-spacing: -1px;
 }
 
@@ -594,4 +598,34 @@ ul {
 
 #offerContainer {
     margin-top: -120px;
+}
+
+.offerText {
+    background-color: #383737;
+    color: #dddada;
+    border-radius: 10px;
+    margin-inline: 20px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 
+    0 0 0 2px rgba(56, 55, 55, 1),
+    0 0 5px rgba(56, 55, 55, 0.5),
+    0 0 10px rgba(56, 55, 55, 0.3),
+    0 0 25px rgba(56, 55, 55, 0.1);
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 35px;
+    background-color: #dddada;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 
+    0 0 0 2px rgba(56, 55, 55, 1),
+    0 0 5px rgba(56, 55, 55, 0.5),
+    0 0 10px rgba(56, 55, 55, 0.3),
+    0 0 25px rgba(56, 55, 55, 0.1);
 }
