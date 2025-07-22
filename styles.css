@@ -12,6 +12,12 @@
     font-style: normal;
 }
 
+:root {
+    --primary-color: #67888f;
+    --secondary-color: #fee2b0;
+    --background-color: #fbf3de;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,8 +25,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #222121;
-    color: #dddada;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
     font-family: 'RobotoFlex', sans-serif;
 }
 
@@ -29,12 +35,12 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    background-color: #383737;
+    background-color: var(--primary-color);
     padding: 0 24px;
     height: 60px;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 5px solid #222121;
+    border-bottom: 5px solid var(--background-color);
     z-index: 2;
 }
 
@@ -44,7 +50,7 @@ main {
 }
 
 a {
-    color: #dddada;
+    color: var(--secondary-color);
 }
 
 #logo {
@@ -57,14 +63,14 @@ a {
     margin-top: 12px;
     margin: 0;
     text-shadow:
-        3px 3px 0 #383737,
-       -3px 3px 0 #383737,
-        3px -3px 0 #383737,
-       -3px -3px 0 #383737,
-        0px 3px 0 #383737,
-        3px 0px 0 #383737,
-        0px -3px 0 #383737,
-       -3px 0px 0 #383737;
+        3px 3px 0 var(--primary-color),
+       -3px 3px 0 var(--primary-color),
+        3px -3px 0 var(--primary-color),
+       -3px -3px 0 var(--primary-color),
+        0px 3px 0 var(--primary-color),
+        3px 0px 0 var(--primary-color),
+        0px -3px 0 var(--primary-color),
+       -3px 0px 0 var(--primary-color);
     z-index: 1;
 }
 
@@ -76,7 +82,7 @@ a {
     margin-left: 51.75px;
     letter-spacing: -0.56px;
     text-shadow:
-        0.25px 0.25px 2px #383737;
+        0.25px 0.25px 2px var(--primary-color);
 }
 
 #logoImg {
@@ -109,7 +115,7 @@ a {
     flex-shrink: 0;
     justify-content: center;
     height: 60px;
-    color: #dddada;
+    color: var(--secondary-color);
     text-decoration: none;
     white-space: nowrap;
 }
@@ -119,7 +125,7 @@ footer {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    background-color: #383737;
+    background-color: var(--primary-color);
 }
 
 #footerLinks {
@@ -161,8 +167,8 @@ footer {
 
 #calendarDays td, #calendarWeeks td {
     height: 175px;
-    background-color: #383737;
-    color: #dddada;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -180,7 +186,7 @@ footer {
 #calendarMonths td, #calendarYear td {
     height: 25px;
     background-color: #494646;
-    color: #dddada;
+    color: var(--secondary-color);
     border-radius: 5px;
     font-size: 15px;
     font-weight: 900;
@@ -205,8 +211,8 @@ footer {
 #calendarForward {
     width: 40px;
     height: 180px;
-    background-color: #dddada;
-    color: #383737;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,10 +261,10 @@ section {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: 
-    0 0 0 2px rgba(56, 55, 55, 1),
-    0 0 5px rgba(56, 55, 55, 0.5),
-    0 0 10px rgba(56, 55, 55, 0.3),
-    0 0 25px rgba(56, 55, 55, 0.1);
+    0 0 0 2px #67888f37,
+    0 0 5px #67888f80,
+    0 0 10px #67888f4d,
+    0 0 25px #67888f1a;
 }
 
 ul {
@@ -266,23 +272,23 @@ ul {
 }
 
 .offer {
-    background-color: #383737;
-    color: #dddada;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 200;
     width: 750px;
     border-radius: 10px;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: 
-    0 0 0 2px rgba(56, 55, 55, 1),
-    0 0 5px rgba(56, 55, 55, 0.5),
-    0 0 10px rgba(56, 55, 55, 0.3),
-    0 0 25px rgba(56, 55, 55, 0.1);
+    0 0 0 2px #67888f37,
+    0 0 5px #67888f80,
+    0 0 10px #67888f4d,
+    0 0 25px #67888f1a;
 }
 
 .offerTitle {
-    background-color: #dddada;
-    color: #383737;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border-radius: 10px 10px 0px 0px;
     height: 85px;
     display: flex;
@@ -305,21 +311,17 @@ ul {
     background-position: center;
 }
 
-.offerText {
-    margin-top: 20px;
-    width: calc(100% - 650px - 250px);
-}
-
 .offerText h1 {
+    overflow: hidden;
     font-size: 75px;
     letter-spacing: -1px;
-    background-color: #dddada;
-    color: #383737;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border-radius: 10px 10px 0px 0px;
     height: 85px;
     margin-bottom: 60px;
     padding-left: 15px;
-    margin-top: -20px;
+    margin-top: 0px;
     letter-spacing: -1px;
 }
 
@@ -373,14 +375,14 @@ ul {
 
 .offerPrice {
     position: fixed;
-    background-color: #dddada;
-    color: #383737;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border-radius: 50%;
     width: 175px;
     height: 175px;
     bottom: 20px;
     right: 20px;
-    box-shadow: #222121 0px 0px 15px;
+    box-shadow: var(--secondary-color) 0px 0px 15px;
 }
 
 .offerPrice h1 {
@@ -459,10 +461,10 @@ ul {
 
 .offerPriceExtra {
     position: fixed;
-    color: #dddada;
-    border: #dddada 8px solid;
+    color: var(--secondary-color);
+    border: var(--secondary-color) 8px solid;
     border-radius: 50%;
-    background-color: #383737;
+    background-color: var(--primary-color);
     width: 140px;
     height: 140px;
     z-index: 1;
@@ -502,7 +504,7 @@ ul {
 }
 
 .offerInfo ul{
-    color: #b4b41b;
+    color: #ffffff;
     margin-left: 25px;
     margin-bottom: 40px;
     font-size: 22px;
@@ -565,10 +567,10 @@ ul {
     margin-left: 60px;
     margin-bottom: -35px;
     border-radius: 25px;
-    background-color: #dddada;
-    color: #383737;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     width: fit-content;
-    box-shadow: #222121 0px 0px 15px;
+    box-shadow: var(--secondary-color) 0px 0px 15px;
 }
 
 #openingHours h1 {
@@ -597,21 +599,22 @@ ul {
 }
 
 #offerContainer {
-    margin-top: -120px;
+    margin-top: -170px;
 }
 
 .offerText {
-    background-color: #383737;
-    color: #dddada;
+    width: calc(100% - 650px - 250px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 10px;
     margin-inline: 20px;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: 
-    0 0 0 2px rgba(56, 55, 55, 1),
-    0 0 5px rgba(56, 55, 55, 0.5),
-    0 0 10px rgba(56, 55, 55, 0.3),
-    0 0 25px rgba(56, 55, 55, 0.1);
+    0 0 0 2px #67888f37,
+    0 0 5px #67888f80,
+    0 0 10px #67888f4d,
+    0 0 25px #67888f1a;
 }
 
 .iconContainer {
@@ -619,13 +622,53 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 0px 20px 0px 35px;
-    background-color: #dddada;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: 
-    0 0 0 2px rgba(56, 55, 55, 1),
-    0 0 5px rgba(56, 55, 55, 0.5),
-    0 0 10px rgba(56, 55, 55, 0.3),
-    0 0 25px rgba(56, 55, 55, 0.1);
+    0 0 0 2px #67888f37,
+    0 0 5px #67888f80,
+    0 0 10px #67888f4d,
+    0 0 25px #67888f1a;
+}
+
+#backgroundContainer {
+    overflow: hidden;
+}
+
+#backgroundImage1 {
+    width: 1000px;
+    height: 1000px;
+    top: -400px;
+    left: -200px;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundImage2 {
+    width: 1200px;
+    height: 1200px;
+    top: -500px;
+    left: -300px;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundImage3 {
+    width: 1000px;
+    height: 1000px;
+    top: 800px;
+    left: 1100px;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundImage4 {
+    width: 1200px;
+    height: 1200px;
+    top: 700px;
+    left: 1000px;
+    position: absolute;
+    z-index: -1;
 }
