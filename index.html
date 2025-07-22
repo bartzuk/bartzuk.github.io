@@ -5,120 +5,227 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpakaland</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
 </head>
 <body>
-    <div class="mainView">
-        <header>
-            <nav>
-                <ul class="top">
-                    <li><a href="#ogniska">OGNISKA</a></li>
-                    <li><a href="#urodziny">URODZINY</a></li>
-                    <li><a href="#relaks">RELAKS</a></li>
-                </ul>
-                <ul class="bottom">
-                    <li><a href="#kontakt">KONTAKT</a></li>
-                    <li><a href="#onas">O &nbsp;NAS</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="navigationContainer">
-                <div class="navigationTop">
-                    <p class="titleText">Alpakaland</p>
-                    <div class="navigationRightMain">
-                        <a class="primaryText" href="#ogniska">OGNISKA</a>
-                        <a class="primaryText" href="#urodziny">URODZINY</a>
-                        <a class="primaryText" href="#relaks">RELAKS</a>  
-                    </div>
-                    <div class="separator"></div>
-                    <div class="navigationRightSec">
-                        <a class="secondaryText" href="#kontakt">KONTAKT</a>
-                        <a class="secondaryText" href="#onas">O NAS</a>
-                    </div>
-                </div>
-            </div>
-            <div class="banner">
-                <div class="bannerImg"></div>
-                <img src="./img/logo.png" alt="Logo" class="bannerLogo">
-                <h1 class="bannerTitle">Alpakaland</h1>
-            </div>
-            <div class="dividerBottom">
-                <img src="./icons/arrow_drop_down.svg" alt="Arrow Down" class="arrowDown">
-            </div>
-            <div class="offers">
-                <div class="offer" id="ogniska">
-                    <div class="offerLeft">
-                        <img src="img/banner3.jpg" class="offerImg">
-                    </div>
-                    <div class="offerCenter">
-                        <h2>OGNISKA SZKOLNE</h2>
-                        <p>Zorganizuj niezapomniane ognisko z alpakami. Czas na integrację, zabawę oraz bliski kontakt ze zwierzętami dla całej klasy. Świetny pomysł na zakończenie roku lub wspólne spotkanie integracyjne. 
-                        </p>
-                    </div>
-                    <div class="offerRight">
+    <header>
+        <div id="logo">
+            <h1>Alpakaland</h1>
+            <h2>ogrodniki</h2>
+        </div>
+        <nav id="navigationBar">
+            <a href="#calendarSection" class="navCalendar">Kalendarz</a>
+            <a href="#birthdaysSection" class="navMain">Urodziny</a>
+            <a href="#bonfiresSection" class="navMain">Ogniska</a>
+            <a href="#parentsSection" class="navMain">Dzien Rodziny</a>
+            <a href="#relaxationSection" class="navMain">Relaks</a>
+            <a href="#contactSection" class="navSecondary">Kontakt</a>
+            <a href="#aboutUsSection" class="navSecondary">O Nas</a>
+        </nav>
+    </header>
+    <main>
+        <section id="calendarSection">
+            <div id="calendarBack">‹</div>
 
+            <table id="calendarContent">
+                <thead>
+                    <tr id="calendarYear"></tr>
+                    <tr id="calendarMonths"></tr>
+                    <tr id="calendarWeeks"></tr>
+                </thead>
+                <tbody>
+                    <tr id="calendarDays"></tr>
+                </tbody>
+            </table>
+            <div id="calendarForward">›</div>
+        </section>
+
+        <script src="calendar.js"></script>
+
+        <div id="offerContainer">
+            <section id="birthdaysSection" class="offerSection">
+                <img src="/img/birthday.svg" alt="urodziny" class="offerIcon">
+                <div class="offerText">
+                    <h1>Urodziny</h1>
+                    <p>
+                        Zorganizuj niezapomniane urodziny dla swojego dziecka w otoczeniu natury, z alpakami, zabawą na świeżym powietrzu i wyjątkową atmosferą. To idealna okazja, by połączyć radość z bliskością zwierząt i beztroską zabawą.
+                        <br>
+                        W ramach pakietu zapewniamy dekorację urodzinową, dostęp do placu zabaw oraz wejście na karmienie alpak. Dzieci mogą spędzić czas aktywnie i radośnie, ciesząc się kontaktem z naturą i zwierzętami.
+                        <br>
+                        Dodatkowo można wzbogacić przyjęcie o animatora, ognisko, malowanie twarzy lub tatuaże, co sprawi, że ten dzień stanie się jeszcze bardziej wyjątkowy.
+                    </p>
+                </div>
+                <div class="offer">
+                    <div class="offerTitle">
+                        <h1>OFERTA</h1>
+                        <h2>URODZIN</h2>
+                        <h3>:</h3>
+                    </div>
+                    <div class="offerMain">
+                        <p>Zapewniamy:</p>
+                        <ul>
+                            <li>Dekorację urodzinową</li>
+                            <li>Wejście na karmienie</li>
+                            <li>Plac zabaw</li>
+                        </ul>
+                        <p>Dodatkowe atrakcje:</p>
+                        <ul>
+                            <li><div class="offerExtra">Animator [30min.] <span class="smallPrice">[50zł]</span></div></li>
+                            <li><div class="offerExtra">Ognisko           <span class="smallPrice">[50zł]</span></div></li>
+                            <li><div class="offerExtra">Malowanie twarzy  <span class="smallPrice">[40zł]</span></div></li>
+                            <li><div class="offerExtra">Tatuaże           <span class="smallPrice">[30zł]</span></div></li>
+                        </ul>
+                    </div>
+                    <div class="offerPrice">
+                        <h1>350zł</h1>
+                        <h2>/</h2>
+                        <h3>3h.</h3>
+                    </div>
+                    <div class="offerPriceExtra">
+                        <h1>
+                            <span class="e1">Każda</span>
+                            <span class="e2">kolejna godzina</span>
+                            <span class="e3">plus</span>
+                            <b>100zł</b>
+                        </h1>
+                    </div>
+                    <div class="offerInfo">
+                        <ul>
+                            <li>Oferta skierowana do grupy<br><b>max. 15 dzieci.</b></li>
+                            <li><div class="offerExtra">Każde kolejne dziecko       <span class="smallPriceInfo">[10zł]</span></div></li>
+                            <li><div class="offerExtra">Uczestnictwo osób dorosłych <span class="smallPriceInfo">[100zł]</span></div></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="offer" id="urodziny">
-                    <div class="offerLeft">
-                        <img src="img/banner3.jpg" class="offerImg">
+            </section>
+            <section id="bonfiresSection" class="offerSection">
+                <img src="/img/grill.svg" alt="ogniska" class="offerIcon">
+                <div class="offerText">
+                    <h1>Ogniska</h1>
+                    <p>
+                        Zorganizuj niezapomniane ognisko z alpakami dla swojej klasy lub grupy przedszkolnej. To wyjątkowa okazja do integracji, zabawy i bliskiego kontaktu ze zwierzętami w przyjaznym, naturalnym otoczeniu.
+                        <br>
+                        Czas urozmaicają zajęcia sportowe lub plastyczne, które dostosowujemy do wieku dzieci i charakteru grupy.
+                        <br>
+                        To idealna propozycja na zakończenie roku szkolnego, spotkanie integracyjne lub po prostu radosny dzień na świeżym powietrzu.
+                    </p>
+                </div>
+                <div class="offer">
+                    <div class="offerTitle">
+                        <h1>OFERTA</h1>
+                        <h2>OGNISK SZKOLNYCH I PRZEDSZKOLNYCH</h2>
+                        <h3>:</h3>
                     </div>
-                    <div class="offerCenter">
-                        <h2>URODZINY</h2>
-                        <p>Świętuj urodziny swojego dziecka w otoczeniu natury. Alpaki, ognisko i wyjątkowe atrakcje dla dzieci!</p>
+                    <div class="offerMain">
+                        <p>Zapewniamy:</p>
+                        <ul>
+                            <li>Prezentację na temat naszych zwierząt</li>
+                            <li>Wejście na karmienie</li>
+                            <li>Ognisko [kiełbasa, chleb i dodatki]</li>
+                            <li>Kawę, herbatę lub wodę</li>
+                            <li>Talerzyki, kubki i sztućce</li>
+                            <li>Zajęcia sportowe lub plastyczne</li>
+                        </ul>
                     </div>
-                    <div class="offerRight">
-                        
+                    <div class="offerPrice">
+                        <h1>35zł</h1>
+                        <h2>/</h2>
+                        <h3>os.</h3>
                     </div>
                 </div>
-                <div class="offer" id="relaks">
-                    <div class="offerLeft">
-                        <img src="img/banner3.jpg" class="offerImg">
+            </section>
+            <section id="parentsSection" class="offerSection">
+                <img src="/img/family.svg" alt="parents" class="offerIcon">
+                <div class="offerText">
+                    <h1>Dzień Rodziny</h1>
+                    <p>
+                        Spędź niedzielę w wyjątkowy sposób. Z całą rodziną, w otoczeniu natury i sympatycznych alpak. „Dzień Rodziny” to idealna okazja do wspólnego odpoczynku, zabawy i wzmacniania rodzinnych więzi na świeżym powietrzu.
+                        <br>
+                        W programie znajduje się prezentacja o naszych zwierzętach, wejście na karmienie, wspólne ognisko oraz integracyjne zabawy z udziałem dzieci i rodziców. Dla wszystkich uczestników dostępne są również napoje: kawa, herbata lub woda.
+                    </p>
+                </div>
+                <div class="offer">
+                    <div class="offerTitle">
+                        <h1>OFERTA</h1>
+                        <h2>DNIA<br>RODZINY</h2>
+                        <h3>:</h3>
                     </div>
-                    <div class="offerCenter">
-                        <h2>RODZINNY RELAKS</h2>
-                        <p>Niedzielny wypoczynek z alpakami. Idealny pomysł na odpoczynek i zabawę na świeżym powietrzu.</p>
+                    <div class="offerMain">
+                        <p>Zapewniamy:</p>
+                        <ul>
+                            <li>Prezentację na temat naszych zwierząt</li>
+                            <li>Wejście na karmienie</li>
+                            <li>Ognisko</li>
+                            <li>Kawę, herbatę lub wodę</li>
+                            <li>Zabawy integracyjne z rodzicami<br>[około 30min.]</li>
+                        </ul>
                     </div>
-                    <div class="offerRight">
-                        
+                    <div class="offerPrice">
+                        <h1>20zł</h1>
+                        <h2>/</h2>
+                        <h3>os.</h3>
                     </div>
-            </div>
-            <div id="kontakt">
-                <div class="kontaktContainer">
-                    <div class="circleSmall">
-                        <div class="circleBig"></div>
-                        <img src="./icons/phone.svg" alt="Phone">
-                        <div class="kontaktText">
-                            <p><a href="tel:+48601683075">+48</a></p>
-                            <p><b><a href="tel:+48601683075">601 683 075</a></b></p>
-                        </div>
+                    <div class="offerPriceExtra">
+                        <h1>
+                            <span class="fe1">Dzieci</span>
+                            <span class="fe2">do 2 lat</span>
+                            <span class="fe3">GRATIS</span>
+                        </h1>
+                    </div>
+                    <div class="offerInfo">
+                        <ul>
+                            <li>Honorujemy <b>kartę dużej rodziny</b></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="kontaktContainer">
-                    <div class="circleSmall">
-                        <div class="circleBig"></div>
-                        <img src="./icons/messenger.svg" alt="Messenger">
-                        <div class="kontaktText">
-                            <p><a href="http://m.me/112601031432286">Messenger</a></p>
-                            <p><a href="http://m.me/112601031432286"><b>Alpakaland</b></a></p>
-                        </div>
+            </section>
+            <section id="relaxationSection" class="offerSection">
+                <img src="/img/relax.svg" alt="relaks" class="offerIcon">
+                <div class="offerText">
+                    <h1>Relaks</h1>
+                    <p>
+                        Niedzielny wypoczynek z alpakami. Idealny pomysł na odpoczynek i zabawę na świeżym powietrzu.
+                        <br>
+                        Zapewniamy dostęp do placu zabaw, możliwość wejścia na karmienie alpak oraz relaks w otoczeniu natury. To doskonała okazja, by spędzić czas z rodziną i przyjaciółmi, ciesząc się spokojem i urokami przyrody. 
+                    </p>
+                </div>
+                <div class="offer">
+                    <div class="offerTitle">
+                        <h1>OFERTA</h1>
+                        <h2>NIEDZIELNEGO<br>RELAKSU</h2>
+                        <h3>:</h3>
+                    </div>
+                    <div class="offerMain">
+                        <p>Zapewniamy:</p>
+                        <ul>
+                            <li>Wejście na karmienie</li>
+                            <li>Plac zabaw</li>
+                        </ul>
+                    </div>
+                    <div class="offerPrice">
+                        <h1>15zł</h1>
+                        <h2>/</h2>
+                        <h3>os.</h3>
+                    </div>
+                    <div id="openingHours">
+                        <h1>NIEDZIELA</h1>
+                        <h2>11<span class="timeMinutes">00</span> - 16<span class="timeMinutes">00</span></h2>
                     </div>
                 </div>
-                <div class="kontaktContainer">
-                    <div class="circleSmall">
-                        <div class="circleBig"></div>
-                        <img src="./icons/email.svg" alt="Email">
-                        <div class="kontaktText">
-                            <p class="smallText"><a href="mailto:alpakalandogrodniki@gmail.com">alpakalandogrodniki</a></a></p>
-                            <p><a href="mailto:alpakalandogrodniki@gmail.com"><b>@gmail.com</b></a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            &copy; 2025 Alpakaland
-        </footer>
-    </div>
+            </section>
+            <section id="contactSection"></section>
+            <section id="aboutUsSection"></section>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Alpakaland.
+        <div id="footerLinks">
+            <a href="#bonfiresSection">Ogniska</a>
+            <a href="#birthdaysSection">Urodziny</a>
+            <a href="#relaxationSection">Relaks</a>
+            <a href="#contactSection">Kontakt</a>
+            <a href="#aboutUsSection">O Nas</a>
+        </div>
+    </footer>
 </body>
 </html>
