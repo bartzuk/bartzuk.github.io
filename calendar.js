@@ -1,6 +1,6 @@
 window.onload = generateCalendar(new Date());
 
-let offset = 0; // Offset for the calendar, can be used to navigate through days
+let offset = 0;
 
 function generateCalendar(startDate) {
     const calendarDays = document.getElementById('calendarDays');
@@ -21,7 +21,6 @@ function generateCalendar(startDate) {
     const dayCell = dayRow.insertCell();
     const weekCell = weekRow.insertCell();
 
-    // Style day
     if (date.toDateString() === today.toDateString()) {
         dayCell.innerHTML = `<div><div>${date.getDate()}</div><div>Dziś</div></div>`;
         dayCell.style.border = '2px solid #dddada';
@@ -29,10 +28,9 @@ function generateCalendar(startDate) {
         dayCell.textContent = date.getDate();
     }
 
-    // Style week
     weekCell.textContent = Weekdays[date.getDay()];
     if (date.getDay() === 0 || date.getDay() === 6) {
-        weekCell.style.color = '#be3d3d'; // Weekend styling
+        weekCell.style.color = '#be3d3d';
     }
     }
 
@@ -53,7 +51,6 @@ function generateCalendar(startDate) {
         }
     }
 
-    // Render month cells
     monthSpans.forEach((m) => {
         const cell = monthRow.insertCell();
         cell.textContent = m.name;
@@ -85,7 +82,6 @@ function generateCalendar(startDate) {
             cell.textContent = currentYear;
             cell.colSpan = spanY;
 
-            // reset
             currentYear = nextDate.getFullYear();
             spanY = 0;
         }
@@ -97,25 +93,21 @@ function updateCalendar() {
     const calendarWeeks = document.getElementById('calendarWeeks');
     const calendarMonths = document.getElementById('calendarMonths');
 
-    // Clear existing content
     calendarDays.innerHTML = '';
     calendarWeeks.innerHTML = '';
     calendarMonths.innerHTML = '';
 
-    // Calculate new start date based on offset
     const startDate = new Date();
     startDate.setDate(startDate.getDate() + offset);
 
-    // Rebuild the calendar with the new start date
     generateCalendar(startDate);
 }
 
-// Add event listeners for navigation buttons
 document.getElementById('calendarBack').addEventListener('click', function () {
-    offset -= 7; // Go back 21 days
+    offset -= 7;
     updateCalendar();
 });
 document.getElementById('calendarForward').addEventListener('click', function () {
-    offset += 7; // Go forward 21 days
+    offset += 7;
     updateCalendar();
 });
